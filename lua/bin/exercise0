@@ -1,2 +1,2 @@
 #!/usr/bin/env luvit
-print('Hello ' .. process.argv[1])
+print('hello ' .. process.argv[1])

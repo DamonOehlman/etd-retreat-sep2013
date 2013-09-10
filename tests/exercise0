@@ -1,0 +1,5 @@
+#!/bin/bash
+source preptest.sh
+
+assert "$EXERCISE Fred" "hello Fred"
+assert_end exercise0

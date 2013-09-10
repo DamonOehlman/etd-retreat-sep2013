@@ -1,0 +1,19 @@
+{
+  "name": "etd-retreat-sep2013",
+  "version": "0.0.0",
+  "private": true,
+  "description": "NICTA Engineering Team Retreat Exercises 2013",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NICTA/etd-retreat-sep2013.git"
+  },
+  "author": "Tony Morris <tony.morris@nicta.com.au>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/NICTA/etd-retreat-sep2013/issues"
+  }
+}

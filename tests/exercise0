@@ -2,4 +2,5 @@
 source preptest.sh
 
 assert "$EXERCISE Fred" "hello Fred"
+assert "$EXERCISE Mary" "hello Mary"
 assert_end exercise0

@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+var pull = require('pull-stream');
+var algo = require('../lib/algo');
+var initial = parseInt(process.argv[2], 10);
+
+function minDivisible(highVal) {
+  var increment = highVal * (highVal - 1);
+  var current = highVal > 1 ? minDivisible(highVal - 1) : 0;
+  var rem = 1;
+  var divisor;
+
+  console.log(highVal);
+
+  while (rem !== 0) {
+    current += increment;
+    divisor = highVal - 2;
+
+    // start the rem 
+    rem = 0;
+    while (rem === 0 && divisor > 0) {
+      rem = current % divisor;
+      divisor -= 1;
+    }
+  }
+
+  return current; 
+}
+
+console.log(minDivisible(initial));

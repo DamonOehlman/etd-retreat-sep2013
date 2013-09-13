@@ -15,5 +15,10 @@
   "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/NICTA/etd-retreat-sep2013/issues"
+  },
+  "dependencies": {
+    "pull-stream": "~2.20.1",
+    "tape": "~1.1.0",
+    "looper": "~2.0.0"
   }
 }

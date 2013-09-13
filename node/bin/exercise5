@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+var pull = require('pull-stream');
+var algo = require('../lib/algo');
+var input = process.argv.slice(2).join('');
+
+pull(
+  algo.slicer(input, 5),
+  pull.map(algo.mul),
+  pull.filter(function(val) {
+    return val !== 0;
+  }),
+  pull.collect(function(err, values) {
+    console.log(Math.max.apply(null, values));
+  })
+);

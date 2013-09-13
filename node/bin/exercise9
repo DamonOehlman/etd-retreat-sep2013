@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+var pull = require('pull-stream');
+var algo = require('../lib/algo');
+var input = parseInt(process.argv[2], 10);
+var bignumbers = [ "thousand" , "million" , "billion" , "trillion" , "quadrillion" , "quintillion" , "sextillion" , "septillion" , "octillion" , "nonillion" , "decillion" , "undecillion" , "duodecillion" , "tredecillion" , "quattuordecillion" , "quindecillion" , "sexdecillion" , "septendecillion" , "octodecillion" , "novemdecillion" , "vigintillion" ];
+var maxNumber = Math.pow(10, bignumbers.length * 3);
+var words = [];
+var startIdx = bignumbers.length - 1;
+
+pull(
+);
+
+console.log(maxNumber);
+console.log(input);
+
+
+// pull(
+//   algo.slicer(input, 5),
+//   pull.map(algo.mul),
+//   pull.filter(function(val) {
+//     return val !== 0;
+//   }),
+//   pull.collect(function(err, values) {
+//     console.log(Math.max.apply(null, values));
+//   })
+// );

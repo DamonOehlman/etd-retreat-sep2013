@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var pull = require('pull-stream');
+var algo = require('../lib/algo');
+var a = parseInt(process.argv[2], 10);
+var b = parseInt(process.argv[3], 10);
+
+pull(
+  algo.generatePairs(a, b,  algo.bruteDecrementing),
+  pull.filter(function(values) {
+    return algo.isPalindrome(values[0] * values[1]);
+  }),
+  pull.take(1),
+  pull.drain(function(values) {
+    console.log(values[0] * values[1])
+  })
+);
